@@ -18,4 +18,5 @@ def convert(time):
     return h+m
 
 #main program
-main()
+if __name__ == "__main__":
+    main()
