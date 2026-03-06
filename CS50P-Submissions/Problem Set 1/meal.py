@@ -13,9 +13,7 @@ def main():
 #define convert funtion
 def convert(time):
     hours,minutes=time.split(":")
-    h=float(hours)
-    m=float(minutes)/60
-    return h+m
+    return float(hours) + float(minutes)/60
 
 #main program
 if __name__ == "__main__":
