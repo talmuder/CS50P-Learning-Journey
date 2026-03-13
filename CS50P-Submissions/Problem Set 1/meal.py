@@ -1,4 +1,4 @@
-#define main funtion
+#define main function
 def main():
     time = input("What time is it ? ").strip()
     if 7 <= convert(time) <= 8:
@@ -10,7 +10,7 @@ def main():
     else:
         print("")
 
-#define convert funtion
+#define convert function
 def convert(time):
     hours,minutes=time.split(":")
     return float(hours) + float(minutes)/60

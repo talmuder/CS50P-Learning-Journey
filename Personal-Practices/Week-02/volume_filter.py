@@ -1,4 +1,4 @@
-#define stock screener funtion
+#define stock screener function
 def stock_screener(stocks,prices,volumes):
 
     count = 0
