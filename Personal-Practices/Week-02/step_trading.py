@@ -1,23 +1,29 @@
-#define check market function
-def check_market():
+# define check market function
+def get_user_target():
     while True:
-        today_price=float(input("Today's Price :"))
-        if today_price > 0:
-            return today_price
-        else:
-            print("Error, Please enter the Correct Price ")
-        
-#define main funtion
+        try:
+            target = float(input("請輸入你的目標成交價 (Target Price): "))
+            if target > 0:
+                return target
+            print("請輸入正數。")
+        except ValueError:
+            print("錯誤：請輸入數字。")
+
+# define main function
 def main():
     market_prices = [68000, 69500, 71000, 70500, 72000]
-    for market_price in market_prices:
-        if market_price >= check_market():
-            print(f"目標達成！成交價：{market_price}")
-            break
-        else:
-            print("今日未達標")
-            break
+    
+    my_target = get_user_target()
+    
+    found = False
+    for price in market_prices:
+        if price >= my_target:
+            print(f"目標達成！成交價：{price}")
+            found = True
+            break 
+    
+    if not found:
+        print("今日市場價格皆未達標。")
 
-#main program
 if __name__ == "__main__":
     main()
