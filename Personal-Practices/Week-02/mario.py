@@ -5,7 +5,7 @@ def main():
 #define print square function
 def print_square(size):
     for i in range(size):
-        print("#"*size)
+        print("#" * size)
 
 #main program
 main()
