@@ -7,5 +7,9 @@ def main():
         if i.isupper():
             print("_" + i.lower(),end = "")
         else:
-            print(i)
-            
+            print(i,end="")
+    print()
+
+#main program
+if __name__ == "__main__":
+    main()
