@@ -17,14 +17,17 @@ def is_valid(plate):
     if not plate.isalnum():
         return False
 
+    found_number = False
+
     for i in range(len(plate)):
         if plate[i].isdigit():
-            if plate[i] == "0":
+            if not found_number:
+                found_number = True
+                if plate[i] == "0":
+                    return False
+        else:
+            if found_number:
                 return False
-        if not plate[i:].isdigit():
-            return False
-        break
-       
     return True
     
 #main program
