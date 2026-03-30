@@ -11,7 +11,7 @@ def fuel():
             x = int(x)
             y = int(y)
 
-            if x > y :
+            if x > y or x < 0 or y < 0:
                 continue
 
             p = round((x / y *100))
