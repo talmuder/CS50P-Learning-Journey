@@ -9,7 +9,7 @@ def main():
                 month = int(month)
                 day = int(day)
                 year = int(year)
-                if  not (1 <= month <= 12 or 1 <= day < 31):
+                if  not (1 <= month <= 12 and 1 <= day < 31):
                     raise ValueError
 
             elif "," in date:
